@@ -368,4 +368,64 @@ bash-3.2$ git push --tags
 Total 0 (delta 0), reused 0 (delta 0)
 To git@github.com:trvrb/puppet-r.git
  * [new tag]         0.0.1 -> 0.0.1
+bash-3.2$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	[31mmodified:   cibuild[m
+#	[31mmodified:   manifests/init.pp[m
+#	[31mmodified:   spec/classes/r_spec.rb[m
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	[31m.bundle/[m
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ git add [K[K[K[K[K[K[K[Kgit add -u
+bash-3.2$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	[32mmodified:   cibuild[m
+#	[32mmodified:   manifests/init.pp[m
+#	[32mmodified:   spec/classes/r_spec.rb[m
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	[31m.bundle/[m
+bash-3.2$ git commit
+[?1049h[?1h=[1;30r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[30;1H".git/COMMIT_EDITMSG" 15L, 424C[>c[2;1H# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   cibuild
+#       modified:   manifests/init.pp
+#       modified:   spec/classes/r_spec.rb
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       .bundle/
+[1m[34m~                                                                                                                                 [17;1H~                                                                                                                                 [18;1H~                                                                                                                                 [19;1H~                                                                                                                                 [20;1H~                                                                                                                                 [21;1H~                                                                                                                                 [22;1H~                                                                                                                                 [23;1H~                                                                                                                                 [24;1H~                                                                                                                                 [25;1H~                                                                                                                                 [26;1H~                                                                                                                                 [27;1H~                                                                                                                                 [28;1H~                                                                                                                                 [29;1H~                                                                                                                                 [1;1H[?12l[?25h[?25l[m[30;1H[1m-- INSERT --[m[30;13H[K[1;1H[?12l[?25h[?25lP[?12l[?25h[?25lPa[?12l[?25h[?25lac[?12l[?25h[?25lck[?12l[?25h[?25lka[?12l[?25h[?25lag[?12l[?25h[?25l[1;6H[K[1;6H[?12l[?25h[?25l[1;5H[K[1;5H[?12l[?25h[?25lka[?12l[?25h[?25lag[?12l[?25h[?25lge[?12l[?25h[?25l [?12l[?25h[?25l t[?12l[?25h[?25lty[?12l[?25h[?25lyp[?12l[?25h[?25lpe[?12l[?25h[?25l [?12l[?25h[?25l s[?12l[?25h[?25lsh[?12l[?25h[?25lho[?12l[?25h[?25lou[?12l[?25h[?25lul[?12l[?25h[?25lld[?12l[?25h[?25l [?12l[?25h[?25l e[?12l[?25h[?25l[1;21H[K[1;21H[?12l[?25h[?25l b[?12l[?25h[?25lbe[?12l[?25h[?25l [?12l[?25h[?25l '[?12l[?25h[?25l'p[?12l[?25h[?25lpk[?12l[?25h[?25lkg[?12l[?25h[?25lg'[?12l[?25h[?25l'.[?12l[?25h[30;1H[K[1;29H[?25l[?12l[?25h[?25l[30;1H:[?12l[?25hq[?25l[30;2H[K[30;2H[?12l[?25hwq[?25l".git/COMMIT_EDITMSG" 15L, 453C written
+[?1l>[?12l[?25h[?1049l[master fc0eae7] Package type should be 'pkg'.
+ 3 files changed, 98 insertions(+), 3 deletions(-)
+bash-3.2$ g[Kgit push[K[K[K[Ktag 0.0.2
+bash-3.2$ git push
+Counting objects: 15, done.
+Delta compression using up to 4 threads.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  12% (1/8)   Writing objects:  25% (2/8)   Writing objects:  37% (3/8)   Writing objects:  50% (4/8)   Writing objects:  62% (5/8)   Writing objects:  75% (6/8)   Writing objects:  87% (7/8)   Writing objects: 100% (8/8)   Writing objects: 100% (8/8), 2.00 KiB, done.
+Total 8 (delta 4), reused 0 (delta 0)
+To git@github.com:trvrb/puppet-r.git
+   f95a302..fc0eae7  master -> master
+bash-3.2$ git push --tags
+Total 0 (delta 0), reused 0 (delta 0)
+To git@github.com:trvrb/puppet-r.git
+ * [new tag]         0.0.2 -> 0.0.2
 bash-3.2$ 
