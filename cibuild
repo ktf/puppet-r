@@ -1,0 +1,279 @@
+Script started on Mon Mar 11 10:51:23 2013
+[?1034hbash-3.2$ 
+bash-3.2$ git push --tags[C[C[C[C[C[C[C[C[C[C[Kscript/cibuild 
+Fetching gem metadata from https://rubygems.org/........
+Fetching gem metadata from https://rubygems.org/..
+Installing rake (10.0.3) 
+Installing addressable (2.3.2) 
+Installing ansi (1.4.3) 
+Installing hiera (1.0.0) 
+Installing highline (1.6.15) 
+Installing json_pure (1.7.7) 
+Installing json (1.7.7) with native extensions 
+Installing thor (0.17.0) 
+Installing librarian-puppet (0.9.8) 
+Installing multipart-post (1.1.5) 
+Installing faraday (0.8.5) 
+Installing faraday_middleware (0.9.0) 
+Installing hashie (1.2.0) 
+Installing multi_json (1.6.0) 
+Installing netrc (0.7.7) 
+Installing octokit (1.23.0) 
+Installing facter (1.6.17) 
+Installing puppet (3.1.0) 
+Installing boxen (1.0.0) 
+Installing puppet-lint (0.3.2) 
+Installing metaclass (0.0.1) 
+Installing mocha (0.13.2) 
+Installing rspec-core (2.12.2) 
+Installing diff-lcs (1.1.3) 
+Installing rspec-expectations (2.12.1) 
+Installing rspec-mocks (2.12.2) 
+Installing rspec (2.12.0) 
+Installing rspec-puppet (0.1.6) 
+Installing puppetlabs_spec_helper (0.4.1) 
+Installing cardboard (1.0.0) 
+Using bundler (1.2.3) 
+[32mYour bundle is complete! It was installed into ./.bundle[0m
+--> Checking syntax:
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ ls script/
+cardboard-exec	cibuild		lint		specs		syntax
+bash-3.2$ script/lint
+bash-3.2$ script/specs
+F
+
+Failures:
+
+  1) r 
+     Failure/Error: })
+     Puppet::Error:
+       Could not find class r for fenrir.lan on node fenrir.lan
+     # ./spec/classes/r_spec.rb:8:in `block (2 levels) in <top (required)>'
+
+Finished in 0.04974 seconds
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/classes/r_spec.rb:4 # r 
+bash-3.2$ script/specs[K/syntax 
+bash-3.2$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+bash-3.2$ s[Kls
+CONTRIBUTING.md	Gemfile		Gemfile.lock	README.md	cibuild		manifests	script		spec
+bash-3.2$ git c[Kinit
+Initialized empty Git repository in /Users/bedfordt/src/puppet-r/.git/
+bash-3.2$ git a[Kstatus
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	[31m.bundle/[m
+#	[31mCONTRIBUTING.md[m
+#	[31mGemfile[m
+#	[31mGemfile.lock[m
+#	[31mREADME.md[m
+#	[31mcibuild[m
+#	[31mmanifests/[m
+#	[31mscript/[m
+#	[31mspec/[m
+nothing added to commit but untracked files present (use "git add" to track)
+bash-3.2$ git add Con[K[KONTRIBUTING.md 
+bash-3.2$ git add Gemfile*
+bash-3.2$ git add README.md 
+bash-3.2$ git add cibuild 
+bash-3.2$ git s[Kadd manifests/
+bash-3.2$ git add script/
+bash-3.2$ git add spec/
+bash-3.2$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	[32mnew file:   CONTRIBUTING.md[m
+#	[32mnew file:   Gemfile[m
+#	[32mnew file:   Gemfile.lock[m
+#	[32mnew file:   README.md[m
+#	[32mnew file:   cibuild[m
+#	[32mnew file:   manifests/init.pp[m
+#	[32mnew file:   script/cardboard-exec[m
+#	[32mnew file:   script/cibuild[m
+#	[32mnew file:   script/lint[m
+#	[32mnew file:   script/specs[m
+#	[32mnew file:   script/syntax[m
+#	[32mnew file:   spec/classes/r_spec.rb[m
+#	[32mnew file:   spec/fixtures/manifests/site.pp[m
+#	[32mnew file:   spec/fixtures/modules/beast/manifests[m
+#	[32mnew file:   spec/spec_helper.rb[m
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	[31m.bundle/[m
+bash-3.2$ 
+bash-3.2$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	[32mnew file:   CONTRIBUTING.md[m
+#	[32mnew file:   Gemfile[m
+#	[32mnew file:   Gemfile.lock[m
+#	[32mnew file:   README.md[m
+#	[32mnew file:   cibuild[m
+#	[32mnew file:   manifests/init.pp[m
+#	[32mnew file:   script/cardboard-exec[m
+#	[32mnew file:   script/cibuild[m
+#	[32mnew file:   script/lint[m
+#	[32mnew file:   script/specs[m
+#	[32mnew file:   script/syntax[m
+#	[32mnew file:   spec/classes/r_spec.rb[m
+#	[32mnew file:   spec/fixtures/manifests/site.pp[m
+#	[32mnew file:   spec/fixtures/modules/beast/manifests[m
+#	[32mnew file:   spec/spec_helper.rb[m
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	[31mmodified:   cibuild[m
+#	[31mdeleted:    spec/fixtures/modules/beast/manifests[m
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	[31m.bundle/[m
+#	[31mspec/fixtures/modules/r/[m
+bash-3.2$ git regit [K[K[K[K[K[K[K[K[K[Kgit reset HEAD
+fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+bash-3.2$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	[32mnew file:   CONTRIBUTING.md[m
+#	[32mnew file:   Gemfile[m
+#	[32mnew file:   Gemfile.lock[m
+#	[32mnew file:   README.md[m
+#	[32mnew file:   cibuild[m
+#	[32mnew file:   manifests/init.pp[m
+#	[32mnew file:   script/cardboard-exec[m
+#	[32mnew file:   script/cibuild[m
+#	[32mnew file:   script/lint[m
+#	[32mnew file:   script/specs[m
+#	[32mnew file:   script/syntax[m
+#	[32mnew file:   spec/classes/r_spec.rb[m
+#	[32mnew file:   spec/fixtures/manifests/site.pp[m
+#	[32mnew file:   spec/fixtures/modules/beast/manifests[m
+#	[32mnew file:   spec/spec_helper.rb[m
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	[31mmodified:   cibuild[m
+#	[31mdeleted:    spec/fixtures/modules/beast/manifests[m
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	[31m.bundle/[m
+#	[31mspec/fixtures/modules/r/[m
+bash-3.2$ git reset --soft HEAD
+fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+bash-3.2$ git reset
+fatal: Failed to resolve 'HEAD' as a valid ref.
+bash-3.2$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	[32mnew file:   CONTRIBUTING.md[m
+#	[32mnew file:   Gemfile[m
+#	[32mnew file:   Gemfile.lock[m
+#	[32mnew file:   README.md[m
+#	[32mnew file:   cibuild[m
+#	[32mnew file:   manifests/init.pp[m
+#	[32mnew file:   script/cardboard-exec[m
+#	[32mnew file:   script/cibuild[m
+#	[32mnew file:   script/lint[m
+#	[32mnew file:   script/specs[m
+#	[32mnew file:   script/syntax[m
+#	[32mnew file:   spec/classes/r_spec.rb[m
+#	[32mnew file:   spec/fixtures/manifests/site.pp[m
+#	[32mnew file:   spec/fixtures/modules/beast/manifests[m
+#	[32mnew file:   spec/spec_helper.rb[m
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	[31mmodified:   cibuild[m
+#	[31mdeleted:    spec/fixtures/modules/beast/manifests[m
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	[31m.bundle/[m
+#	[31mspec/fixtures/modules/r/[m
+bash-3.2$ gt r[K[K[Kit reset --hard
+fatal: Failed to resolve 'HEAD' as a valid ref.
+bash-3.2$ ig[K[Kgit status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	[32mnew file:   CONTRIBUTING.md[m
+#	[32mnew file:   Gemfile[m
+#	[32mnew file:   Gemfile.lock[m
+#	[32mnew file:   README.md[m
+#	[32mnew file:   cibuild[m
+#	[32mnew file:   manifests/init.pp[m
+#	[32mnew file:   script/cardboard-exec[m
+#	[32mnew file:   script/cibuild[m
+#	[32mnew file:   script/lint[m
+#	[32mnew file:   script/specs[m
+#	[32mnew file:   script/syntax[m
+#	[32mnew file:   spec/classes/r_spec.rb[m
+#	[32mnew file:   spec/fixtures/manifests/site.pp[m
+#	[32mnew file:   spec/fixtures/modules/beast/manifests[m
+#	[32mnew file:   spec/spec_helper.rb[m
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	[31mmodified:   cibuild[m
+#	[31mdeleted:    spec/fixtures/modules/beast/manifests[m
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	[31m.bundle/[m
+#	[31mspec/fixtures/modules/r/[m
+bash-3.2$ git add cibuild 
+bash-3.2$ git add spec/
