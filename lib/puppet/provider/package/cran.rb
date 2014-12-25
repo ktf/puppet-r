@@ -25,7 +25,7 @@ Puppet::Type.type(:package).provide :cran, :parent => Puppet::Provider::Package 
 #
 
   def query
-     existence = Kernel.system "echo \"'#{@resource[:name]}' %in% rownames(installed.packages())\" | Rscript --quiet /dev/stdin | grep TRUE"
+     existence = Kernel.system "echo \"'#{@resource[:name]}' %in% rownames(installed.packages())\" | Rscript --quiet /dev/stdin | grep -q TRUE"
      if existence
         return { :ensure => "1.0", :name => @resource[:name] }
      else
